@@ -1,0 +1,2 @@
+### Getting the Employee details
+GET http://localhost:4004/EmployeeSRV/Employee HTTP/1.1
