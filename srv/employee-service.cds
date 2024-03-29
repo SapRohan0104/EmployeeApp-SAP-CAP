@@ -6,6 +6,6 @@ service EmployeeService {
     entity Address     as projection on db.Address;
     entity Salary      as projection on db.Salary;
     entity Department  as projection on db.Department;
-    @readonly
     entity Designation as projection on db.Designation;
 }
+
