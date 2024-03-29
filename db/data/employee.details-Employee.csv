@@ -1,2 +1,4 @@
-ID,fName,lName,gender,DOB,contractStarted,email,phone,address_ID
-429fc5eb-d7eb-4824-85c4-221026c60ddb,Ryka,Mital,Female,1990-01-01,2012-03-01,Ryka.Mital@xyz.com,9876754326,282843dd-9348-42d2-a873-ef5579aa8aad
+ID,fName,lName,gender,DOB,contractStarted,email,phone
+429fc5eb-d7eb-4824-85c4-221026c60ddb,Ryka,Mital,Female,1990-01-01,2012-03-01,Ryka.Mital@xyz.com,9876754326
+c1fbef5f-8771-4c77-9f26-219470eb8935,Samarth,Joshi,Male,1985-01-09,2007-07-17,Samarth.Joshi@xyz.com,9878654532
+5f6de571-f161-4c40-9b12-def023bfd14f,Haiya,Luthra,Female,1991-03-12,2013-07-17,Haiya.Luthra@abc.com,9850998565
