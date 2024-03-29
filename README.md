@@ -6,3 +6,8 @@ This is a Employee Details project Using SAP Caloud Application Programming mode
 - git add .: to add all the fiels in teh commit
 - git commit -m "<Message>": Create a commit with proper message
 - git push: to push the code.
+
+
+### CAP Events
+
+![alt text](./images/image.png)
