@@ -18,6 +18,7 @@ entity Employee : cuid, managed {
   lName           : String;
   gender          : String;
   DOB             : Date;
+  age             : Integer;
   contractStarted : Date;
   email           : types.Email not null;
   phone           : types.PhoneNumber not null;

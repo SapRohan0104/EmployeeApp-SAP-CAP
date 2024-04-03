@@ -7,4 +7,5 @@ annotate EmployeeService.Employee with {
     DOB    @title: '{i18n>DOB}';
     email  @title: '{i18n>Email}';
     gender @title: '{i18n>Gender}';
+    phone  @title: '{i18n>phone}';
 };
