@@ -24,6 +24,7 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: EmployeeDetails-db
+      - name: EmployeeDetails-auth
 
   - name: EmployeeDetails-db-deployer
     type: hdb
@@ -33,9 +34,31 @@ modules:
     requires:
       - name: EmployeeDetails-db
 
+  - name: EmployeeDetails
+    type: approuter.nodejs
+    path: app/router
+    parameters:
+      keep-existing-routes: true
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: srv-api
+        group: destinations
+        properties:
+          name: srv-api # must be used in xs-app.json as well
+          url: ~{srv-url}
+          forwardAuthToken: true
+      - name: EmployeeDetails-auth
+
 resources:
   - name: EmployeeDetails-db
     type: com.sap.xs.hdi-container
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: EmployeeDetails-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json

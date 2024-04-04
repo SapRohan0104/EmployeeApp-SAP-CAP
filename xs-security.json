@@ -1,0 +1,12 @@
+{
+  "xsappname": "EmployeeDetails-xs-app",
+  "tenant-mode": "dedicated",
+  "scopes": [],
+  "attributes": [],
+  "role-templates": [],
+  "role-collections": [],
+  "oauth2-configuration": {
+    "token-validity": 3600,
+    "redirect-uris": ["https://*/**"]
+  }
+}
