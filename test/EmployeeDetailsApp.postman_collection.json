@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "d159d9b6-45ba-45ce-b105-ac3f0d7824a8",
+		"name": "EmployeeDetailsApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10656067"
+	},
+	"item": [
+		{
+			"name": "GetHelloWorld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://btp-users-app.cfapps.us10-001.hana.ondemand.com/users/1001",
+					"protocol": "https",
+					"host": [
+						"btp-users-app",
+						"cfapps",
+						"us10-001",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"users",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n      \"name\": \"John Doe\",\r\n      \"ID\": 1021,\r\n      \"DOB\": \"190-01-01\",\r\n      \"Age\": 0,\r\n      \"email\": \"john.doe@example.com\",\r\n      \"Address\": \"123, ABC Street, New Delhi\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btp-users-app.cfapps.us10-001.hana.ondemand.com/users",
+					"protocol": "https",
+					"host": [
+						"btp-users-app",
+						"cfapps",
+						"us10-001",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJWTToken",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "Bu8+KiltPW4SyWlua1BBjlaeaRU=",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "sb-EmployeeDetails-b68f6a69trial-dev!t267771",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://b68f6a69trial.authentication.us10.hana.ondemand.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Demo-XSUAA",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Saphana@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "avik.saha0104@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://b68f6a69trial-dev-employeedetails-srv.cfapps.us10-001.hana.ondemand.com/EmployeeSRV/Employee",
+					"protocol": "https",
+					"host": [
+						"b68f6a69trial-dev-employeedetails-srv",
+						"cfapps",
+						"us10-001",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"EmployeeSRV",
+						"Employee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
