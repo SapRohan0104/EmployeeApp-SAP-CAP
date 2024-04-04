@@ -12,3 +12,38 @@ This is a Employee Details project Using SAP Caloud Application Programming mode
 
 ![alt text](./images/image.png)
 
+### Approuter Implementations
+- Add Approuter Into the project: `cds add approuter` (Get help using `cds add --help` command)
+- It generates below listed Items
+    - New `xs-security.json` file: Roles, Scopes, Role-Collections
+    - Update `Package.json` File: Adds `"auth": "xsuaa"`
+    - Update `MTA.Yaml` File: 
+        > ```yaml
+        >- name: EmployeeDetails-auth
+        >type: org.cloudfoundry.managed-service
+        >parameters:
+        > service: xsuaa
+        > service-plan: application
+        > path: ./xs-security.json
+        >
+        >   - name: EmployeeDetails
+        >type: approuter.nodejs
+        >path: app/router
+        >parameters:
+        >keep-existing-routes: true
+        >disk-quota: 256M
+        >memory: 256M
+        >requires:
+        >- name: srv-api
+        >group: destinations
+        >properties:
+        >  name: srv-api # must be used in xs-app.json as well
+        >  url: ~{srv-url}
+        >  forwardAuthToken: true
+        >- name: EmployeeDetails-auth
+        >```
+    - New `Router Folder` inside App Folder with Package.json, xs-app.json, node_modules and package-lock.json file.
+
+    - Reference: 
+        ![alt text](./images/Approuter.png)
+        ![alt text](./images/ApprouterArchitecture.png)
