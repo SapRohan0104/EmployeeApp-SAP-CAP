@@ -43,3 +43,7 @@ This is a Employee Details project Using SAP Caloud Application Programming mode
         >- name: EmployeeDetails-auth
         >```
     - New `Router Folder` inside App Folder with Package.json, xs-app.json, node_modules and package-lock.json file.
+
+    - Reference: 
+        ![alt text](./images/Approuter.png)
+        ![alt text](./images/ApprouterArchitecture.png)
