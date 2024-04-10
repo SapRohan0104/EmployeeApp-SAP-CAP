@@ -22,7 +22,7 @@
   },
   "cds": {
     "requires": {
-      "db": "hana",
+      "db": "sqlite",
       "auth": "xsuaa"
     }
   }

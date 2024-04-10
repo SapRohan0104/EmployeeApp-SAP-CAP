@@ -3,5 +3,5 @@ const { onBeforeEmployeeCreate, onAfterEmployeeCreate } = require("./src/control
 
 module.exports = cds.service.impl(async (srv) => {
     srv.before(["CREATE", "READ"], "Employee", onBeforeEmployeeCreate)
-    srv.after("CREATE", "Employee", onAfterEmployeeCreate)
+    srv.after(["READ"], "Employee", onAfterEmployeeCreate)
 });
