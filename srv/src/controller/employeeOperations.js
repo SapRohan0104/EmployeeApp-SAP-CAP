@@ -5,8 +5,9 @@ const onBeforeEmployeeCreate = async (req) => {
   };
   
   const onAfterEmployeeCreate = async (req) => {
-    req.fName = `Mr. ${req.fName}`;
-    return req;
+    req.forEach(element => {
+      element.fName = `Mr. ${element.fName}`;
+    });
   };
   
   const _getAge = (sDate) => {

@@ -47,3 +47,7 @@ This is a Employee Details project Using SAP Caloud Application Programming mode
     - Reference: 
         ![alt text](./images/Approuter.png)
         ![alt text](./images/ApprouterArchitecture.png)
+
+- How to generate default-env file
+ > To generate we use cf default-env `<Service Name from MTA Yaml File>` command
+ > To Install Default-env we use please refer https://github.com/saphanaacademy/DefaultEnv
